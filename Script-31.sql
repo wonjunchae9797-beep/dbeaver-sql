@@ -1,0 +1,12 @@
+SELECT * FROM MEMBER;
+
+SELECT * FROM board
+WHERE 
+     STATUS ='Y'
+  AND 
+     BOARD_CONTENT LIKE % || '이' || '%';
+
+SELECT DECODE(COUNT(*), 1, 'N', 0, 'Y')
+	FROM MEMBER
+WHERE USER_ID = 'admin1';
+
